@@ -201,8 +201,11 @@ class DiskGraphMerger(GraphMerger):
 # edge_key_function), and stores them in a dictionary.
 class MemoryGraphMerger(GraphMerger):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self,
+                 node_properties_that_should_be_sets=None,
+                 edge_properties_that_should_be_sets=None,):
+        super().__init__(node_properties_that_should_be_sets=node_properties_that_should_be_sets,
+                         edge_properties_that_should_be_sets=edge_properties_that_should_be_sets)
         self.nodes = {}
         self.edges = {}
 
