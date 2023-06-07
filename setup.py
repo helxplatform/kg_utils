@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(
-    name="kg-utils",
+    name="kg_utils",
     version="0.0.1",
     author="Evan Morris",
     author_email="",
