@@ -2,8 +2,8 @@
 from setuptools import setup
 
 setup(
-    name="kg-utils",
-    version="0.0.1",
+    name="kg_utils",
+    version="0.0.2",
     author="Evan Morris",
     author_email="",
     url="https://github.com/helxplatform/kg_utils",

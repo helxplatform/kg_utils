@@ -64,12 +64,12 @@ if __name__ == '__main__':
     # stream out nodes to nodes.jsonl file
     with open('./output/nodes.jsonl', 'w') as stream:
         for nodes in disk_merger.get_merged_nodes_jsonl():
-            stream.write(json.dumps(nodes).decode('utf-8') + '\n')
+            stream.write(nodes)
 
     # stream out edges to edges.jsonl file
     with open('./output/edges.jsonl', 'w') as stream:
         for edges in disk_merger.get_merged_edges_jsonl():
-            stream.write(json.dumps(edges).decode('utf-8') + '\n')
+            stream.write(edges)
 
     # clear dir and data
     # clean_up_dir('./output')
