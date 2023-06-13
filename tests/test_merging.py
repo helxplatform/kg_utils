@@ -1,5 +1,5 @@
-from kg_utils.merging import GraphMerger, MemoryGraphMerger, DiskGraphMerger
-from kg_utils.constants import *
+from kgutils.merging import GraphMerger, MemoryGraphMerger, DiskGraphMerger
+from kgutils.constants import *
 import os
 import json
 

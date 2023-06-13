@@ -2,7 +2,7 @@ import glob
 import os
 import pathlib
 import orjson as json
-from kg_utils.merging import DiskGraphMerger, DEFAULT_EDGE_PROPERTIES_THAT_SHOULD_BE_SETS, DEFAULT_NODE_PROPERTIES_THAT_SHOULD_BE_SETS
+from kgutils.merging import DiskGraphMerger, DEFAULT_EDGE_PROPERTIES_THAT_SHOULD_BE_SETS, DEFAULT_NODE_PROPERTIES_THAT_SHOULD_BE_SETS
 import shutil
 
 
