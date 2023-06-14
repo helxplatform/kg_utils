@@ -2,8 +2,8 @@ import os
 import jsonlines
 import secrets
 from xxhash import xxh64_hexdigest
-from kgutils.utils import quick_json_loads, quick_json_dumps, chunk_iterator
-from kgutils.constants import *
+from kg_utils.utils import quick_json_loads, quick_json_dumps, chunk_iterator
+from kg_utils.constants import *
 
 NODE_ENTITY_TYPE = 'node'
 EDGE_ENTITY_TYPE = 'edge'

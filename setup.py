@@ -2,13 +2,13 @@
 from setuptools import setup
 
 setup(
-    name="kgutils",
-    version="0.0.5",
+    name="kg_utils",
+    version="0.0.6",
     author="Evan Morris",
     author_email="",
     url="https://github.com/helxplatform/kg_utils",
     description="Merge KGX json objects",
-    packages=["kgutils"],
+    packages=["kg_utils"],
     install_requires=[
         "orjson==3.8.10",
         "xxhash==3.2.0",
