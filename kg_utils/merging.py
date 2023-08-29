@@ -34,7 +34,7 @@ def entity_merging_function(entity_1, entity_2, properties_that_are_sets):
             if isinstance(value, list):
                 if isinstance(entity_1[key], str):
                     # if entity 1 is a string convert it to a list
-                    entity_1[key] = [entitiy_1[key]]
+                    entity_1[key] = [entity_1[key]]
                 entity_1[key].extend(value)
                 
                 if key in properties_that_are_sets:
