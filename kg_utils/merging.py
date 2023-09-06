@@ -32,7 +32,11 @@ def entity_merging_function(entity_1, entity_2, properties_that_are_sets):
         # otherwise keep the first one
         if key in entity_1:
             if isinstance(value, list):
+                if isinstance(entity_1[key], str):
+                    # if entity 1 is a string convert it to a list
+                    entity_1[key] = [entity_1[key]]
                 entity_1[key].extend(value)
+                
                 if key in properties_that_are_sets:
                     # for keys in properties_that_are_sets, cast the list to a set to force unique elements
                     entity_1[key] = list(set(entity_1[key]))
