@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="kg_utils",
-    version="0.0.6",
+    version="0.0.8",
     author="Evan Morris",
     author_email="",
     url="https://github.com/helxplatform/kg_utils",
