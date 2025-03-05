@@ -10,7 +10,7 @@ setup(
     description="Merge KGX json objects",
     packages=["kg_utils"],
     install_requires=[
-        "orjson",
+        "orjson==3.9.15",
         "xxhash==3.2.0",
         "jsonlines==3.1.0"
     ],
