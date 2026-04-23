@@ -3,16 +3,16 @@ from setuptools import setup
 
 setup(
     name="kg_utils",
-    version="0.0.10",
+    version="0.0.10.1",
     author="Evan Morris",
     author_email="",
     url="https://github.com/helxplatform/kg_utils",
     description="Merge KGX json objects",
     packages=["kg_utils"],
     install_requires=[
-        "orjson==3.9.15",
-        "xxhash==3.2.0",
-        "jsonlines==3.1.0"
+        "orjson>=3.9.15",
+        "xxhash>=3.2.0",
+        "jsonlines>=3.1.0"
     ],
     zip_safe=False,
     license="MIT",

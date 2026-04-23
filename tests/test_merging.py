@@ -3,9 +3,6 @@ from kg_utils.constants import *
 import os
 import json
 
-TEMP_DIRECTORY = os.path.dirname(os.path.abspath(__file__)) + '/workspace'
-
-
 def node_property_merging_test(graph_merger: GraphMerger):
 
     test_nodes = [{'id': 'NODE:1',
@@ -29,8 +26,9 @@ def test_node_property_merging_in_memory():
     node_property_merging_test(MemoryGraphMerger())
 
 
-def test_node_property_merging_on_disk():
-    node_property_merging_test(DiskGraphMerger(temp_directory=TEMP_DIRECTORY, chunk_size=8))
+def test_node_property_merging_on_disk(tmp_path):
+    node_property_merging_test(DiskGraphMerger(temp_directory=str(tmp_path),
+                                               chunk_size=8))
 
 
 def node_merging_counts_test(graph_merger: GraphMerger):
@@ -59,8 +57,9 @@ def test_node_merging_counts_in_memory():
     node_property_merging_test(MemoryGraphMerger())
 
 
-def test_node_merging_counts_on_disk():
-    node_property_merging_test(DiskGraphMerger(temp_directory=TEMP_DIRECTORY, chunk_size=8))
+def test_node_merging_counts_on_disk(tmp_path):
+    node_property_merging_test(
+        DiskGraphMerger(temp_directory=str(tmp_path), chunk_size=8))
 
 
 def edge_property_merging_test(graph_merger: GraphMerger):
@@ -87,8 +86,9 @@ def test_edge_property_merging_in_memory():
     edge_property_merging_test(MemoryGraphMerger())
 
 
-def test_edge_property_merging_on_disk():
-    edge_property_merging_test(DiskGraphMerger(temp_directory=TEMP_DIRECTORY, chunk_size=8))
+def test_edge_property_merging_on_disk(tmp_path):
+    edge_property_merging_test(
+        DiskGraphMerger(temp_directory=str(tmp_path), chunk_size=8))
 
 
 def edge_merging_counts_test(graph_merger: GraphMerger):
@@ -144,5 +144,6 @@ def test_edge_merging_counts_in_memory():
     edge_merging_counts_test(MemoryGraphMerger())
 
 
-def test_edge_merging_counts_on_disk():
-    edge_merging_counts_test(DiskGraphMerger(temp_directory=TEMP_DIRECTORY, chunk_size=8))
+def test_edge_merging_counts_on_disk(tmp_path):
+    edge_merging_counts_test(
+        DiskGraphMerger(temp_directory=str(tmp_path), chunk_size=8))
